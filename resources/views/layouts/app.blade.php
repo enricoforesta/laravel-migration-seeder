@@ -20,10 +20,13 @@
                 <h2>Compagnia: {{ $train['company'] }}</h2>
                 <h3>Stazione partenza: {{ $train['departure_station'] }} - Stazione arrivo:
                     {{ $train['arrival_station'] }}</h3>
+                <h3>Data: {{ $train['departure_date'] }} </h3>
                 <h4>Orario partenza: {{ $train['departure_time'] }} - Orario arrivo:
                     {{ $train['arrival_time'] }}</h4>
                 @if ($train['on_time'])
                     <h4>Treno in orario</h4>
+                @else
+                    <h4>Treno in ritardo</h4>
                 @endif
             </li>
         @endforeach
